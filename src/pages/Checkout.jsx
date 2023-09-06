@@ -19,15 +19,15 @@ const getColorName = (param) => {
             return 'Orange'
         case '#cc0000':
             return 'Red'
-        case '#ddd':
+        case '#dddddd':
             return 'Silver'
         default:
-            return 'Banana'
+            return 'FAIL'
         
     }
 }
 
-
+console.log(state.frameColor);
 
 const Checkout = () => {
     const snap = useSnapshot(state);
@@ -64,8 +64,16 @@ const Checkout = () => {
                             <h1 className='text-5xl mb-8'>Checkout</h1>
                             <p className='text-xl mb-2'>Your selection:</p>
                             <ul>
-                                <li className='text-2xl ml-4'>  Frames: {getColorName(state.MainColor)}</li>
-                                <li className='text-2xl ml-4'>  Arms: {getColorName(state.armColor)}</li>
+                                <li className='flex'>
+                                <div className='text-2xl ml-4'>Frames:</div>
+                                <div className='text-2xl ml-4'>{getColorName(snap.MainColor)}</div>
+                                </li>
+                                <li className='flex'>
+                                <div className='text-2xl ml-4'>Arms:</div>
+                                <div className='text-2xl ml-4'>{getColorName(snap.armColor)}</div>
+                                </li>
+
+                                
                             </ul>
                             <h3 className='mt-6 mb-6 text-2xl '>Total: <span className='font-bold'>£59.99</span></h3>
 

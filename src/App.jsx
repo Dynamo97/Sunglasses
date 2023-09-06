@@ -9,7 +9,6 @@ const App = () => {
     <main className='app transition-all ease-in'>
       <Home />
       <Checkout />
-      
       <Customizer />
       <Canvas />
       

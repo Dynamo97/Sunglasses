@@ -61,7 +61,7 @@ export const colours = [
   },
   {
     name: 'Silver',
-    color: '#ddd',
+    color: '#dddddd',
   }
 ]
 
